@@ -47,4 +47,11 @@ The Snake game code consists of six main classes: `Game`, `Snake`, `Controller`,
 
 ![Code Structure](images/codestructure.png)
 
-## 
+## Rubric Items Satisfied by the New Features
+
+### README (Required)
+| Criteria | Explanation | Reference |
+| -------- | ----------- | --------- |
+| A README with instructions is included with the project | The README is included with the project and has instructions for building/running the project. |  |
+| The README indicates which project is chosen. | The README indicates the project selected. It also presents the file and class structure and describes the expected behavior or output of the game. |  |
+| The README includes information about each rubric point addressed. | The README indicates which rubric points are addressed. The README also indicates where in the code (i.e. files and line numbers) that the rubric points are addressed. |  |
