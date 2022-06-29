@@ -8,6 +8,7 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
   PlaceFood();
+  PlacePoison();
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -25,7 +26,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food);
+    renderer.Render(snake, food, poison);
 
     frame_end = SDL_GetTicks();
 
@@ -47,6 +48,15 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     if (frame_duration < target_frame_duration) {
       SDL_Delay(target_frame_duration - frame_duration);
     }
+
+    // Terminate the run loop if the snake is dead
+    if (!snake.alive)
+    {
+      running = false;
+      std::cout << "*******************************************************************" << std::endl
+                << "***                            GAME OVER                        ***" << std::endl
+                << "*******************************************************************" << std::endl;
+    }
   }
 }
 
@@ -65,6 +75,44 @@ void Game::PlaceFood() {
   }
 }
 
+void Game::PlacePoison() {
+    int x, y;
+    int counter = 1;
+
+  // Check if the score is 5's multiple
+  if (score % 5 == 0 ) 
+    {
+      // Create an SDL point and add poison cell after every 5th food eaten by the snake
+      SDL_Point p; 
+      p.x = 0; 
+      p.y = 0;
+      for(int i = 0; i < counter; i++)
+      {
+        poison.emplace_back(p);
+      }
+    }
+    counter++;
+  // Iterate through all the items in the poison vector
+  for(SDL_Point  &p : poison)
+  {
+    if (p.x == 0 && p.y == 0)
+    {
+        while (true)
+      {
+        x = random_w(engine);
+        y = random_h(engine);
+        // Check that the location is not occupied by a snake or food item before placing poison.
+        if (!snake.SnakeCell(x, y) && !Game::FoodCell(x, y) && !Game::PoisonCell(x, y)) 
+        {
+          p.x = x;
+          p.y = y;
+          break;
+        }
+      }
+    }
+  }
+}
+
 void Game::Update() {
   if (!snake.alive) return;
 
@@ -77,10 +125,41 @@ void Game::Update() {
   if (food.x == new_x && food.y == new_y) {
     score++;
     PlaceFood();
+    PlacePoison();
     // Grow snake and increase speed.
     snake.GrowBody();
     snake.speed += 0.02;
   }
+  for (SDL_Point const &p : poison)
+  {
+    // New:Check if the snake has eaten poisoned food
+    if(p.x == new_x && p.y == new_y)
+    {
+      // The snake dies if it eats poisoned food
+      snake.alive = false ;
+    }
+  }
+}
+
+bool Game::FoodCell(int x, int y) 
+{
+  if (x == food.x && y == food.y) 
+  {
+    return true;
+  }
+   return false;
+}
+
+bool Game::PoisonCell(int x, int y) 
+{
+  for(auto &P : poison)
+  {
+    if (x == P.x && y == P.y) 
+    {
+      return true;
+    }
+  }
+  return false;
 }
 
 int Game::GetScore() const { return score; }

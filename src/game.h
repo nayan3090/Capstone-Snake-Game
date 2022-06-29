@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <random>
+#include <vector>
 #include "SDL.h"
 #include "controller.h"
 #include "renderer.h"
@@ -15,9 +16,13 @@ class Game {
   int GetScore() const;
   int GetSize() const;
 
+  bool FoodCell(int x, int y);
+  bool PoisonCell(int x, int y);
+
  private:
   Snake snake;
   SDL_Point food;
+  std::vector<SDL_Point> poison; // New:vector to store poison points
 
   std::random_device dev;
   std::mt19937 engine;
@@ -27,6 +32,7 @@ class Game {
   int score{0};
 
   void PlaceFood();
+  void PlacePoison();
   void Update();
 };
 
