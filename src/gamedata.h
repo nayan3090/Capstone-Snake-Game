@@ -11,13 +11,14 @@ public:
 
     void PrintHighScores();
     void AppendPlayerScore(int score);
-    std::string AddPlayerName();
     void WriteScoreToGameData();
 
 
 private:
     std::string _fileName;
     std::multimap<int, std::string, std::greater<int>> _playerScore;
+
+    std::string AddPlayerName();
 };
 
 #endif

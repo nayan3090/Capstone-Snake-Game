@@ -6,6 +6,7 @@
 
 /* GameData Constructor */
 // Loops, Functions, I/O Criteria: The project reads data from an external file
+// Object Oriented Programming Criteria: Class constructors utilize member initialization lists.
 GameData::GameData(std::string name) : _fileName(name)
 {
     std::ifstream input(name);

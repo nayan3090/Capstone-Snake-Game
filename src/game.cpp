@@ -75,6 +75,7 @@ void Game::PlaceFood() {
   }
 }
 
+// Object Oriented Programming Criteria: Classes encapsulate behavior.
 void Game::PlacePoison() {
     int x, y;
     int counter = 1;
@@ -132,7 +133,7 @@ void Game::Update() {
   }
   for (SDL_Point const &p : poison)
   {
-    // New:Check if the snake has eaten poisoned food
+    // Check if the snake has eaten poisoned food
     if(p.x == new_x && p.y == new_y)
     {
       // The snake dies if it eats poisoned food

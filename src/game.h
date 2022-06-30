@@ -32,6 +32,7 @@ class Game {
   int score{0};
 
   void PlaceFood();
+  // Object Oriented Programming Criteria: Classes encapsulate behavior.
   void PlacePoison();
   void Update();
 };
