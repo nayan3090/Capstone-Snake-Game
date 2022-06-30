@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 
-
 void GameMenu::userSelection()
 {
     std::cout<< "************************* Snake Game Menu *************************" << std::endl

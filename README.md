@@ -49,9 +49,20 @@ The Snake game code consists of six main classes: `Game`, `Snake`, `Controller`,
 
 ## Rubric Items Satisfied by the New Features
 
-### README (Required)
-| Criteria | Explanation | Reference |
-| -------- | ----------- | --------- |
+### README
+| Criteria | Explanation | References |
+| -------- | ----------- | ---------- |
 | A README with instructions is included with the project | The README is included with the project and has instructions for building/running the project. |  |
 | The README indicates which project is chosen. | The README indicates the project selected. It also presents the file and class structure and describes the expected behavior or output of the game. |  |
 | The README includes information about each rubric point addressed. | The README indicates which rubric points are addressed. The README also indicates where in the code (i.e. files and line numbers) that the rubric points are addressed. |  |
+
+### Compiling and Testing
+| Criteria | Explanation | References |
+| -------- | ----------- | ---------- |
+| The submission must compile and run. | The project code compiles and runs without errors. |  |
+
+### Loops, Functions, I/O
+| Criteria | Explanation | References |
+| -------- | ----------- | ---------- |
+| The project demonstrates an understanding of C++ functions and control structures. | A variety of control structures are used in the project and the project code is clearly organized into functions. One example of function and control structure is attached in the adjacent references. | Function: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) line 27 onwards
+Control structure: [main.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/main.cpp) line 19 - 36 |

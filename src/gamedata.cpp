@@ -23,6 +23,7 @@ GameData::GameData(std::string name) : _fileName(name)
     }
 }
 
+// Loops, Functions, I/O Criteria: Example to demonstrate the usage of function
 void GameData::PrintHighScores()
 {
     if (_playerScore.empty()){
