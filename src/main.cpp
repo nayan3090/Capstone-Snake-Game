@@ -6,12 +6,17 @@
 #include "renderer.h"
 
 int main() {
+  // New features:
+  // (1) Creates GameMenu in the terminal to take input from the player to decide what to do next in the game 
+  // (2) Retrieves GameData to display 'Highscores' if asked by the player or at the end of the game, decide based on the player's score if their name would be up there on the Leaderboard
   GameMenu gamemenu;
   GameData gamedata("../data/gamedata.txt");
 
   while (true)
   {
     gamemenu.userSelection();
+    // Loops, Functions, I/O Criteria: Example to demonstrate the usage of control structure
+    // Used 'switch case' to manipulate the output of the program based on player's input
     switch (gamemenu.getSelection())
     {
       case 1:

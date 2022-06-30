@@ -5,6 +5,7 @@
 #include <iomanip>
 
 /* GameData Constructor */
+// Loops, Functions, I/O Criteria: The project reads data from an external file
 GameData::GameData(std::string name) : _fileName(name)
 {
     std::ifstream input(name);
@@ -76,6 +77,7 @@ std::string GameData::AddPlayerName()
     return player;
 }
 
+// Loops, Functions, I/O Criteria: The project writes data to a file
 void GameData::WriteScoreToGameData()
 {
     std::ofstream output(_fileName, std::ofstream::out);

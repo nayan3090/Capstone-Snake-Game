@@ -64,5 +64,7 @@ The Snake game code consists of six main classes: `Game`, `Snake`, `Controller`,
 ### Loops, Functions, I/O
 | Criteria | Explanation | References |
 | -------- | ----------- | ---------- |
-| The project demonstrates an understanding of C++ functions and control structures. | A variety of control structures are used in the project and the project code is clearly organized into functions. One example of function and control structure is attached in the adjacent references. | Function: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) line 27 onwards
-Control structure: [main.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/main.cpp) line 19 - 36 |
+| The project demonstrates an understanding of C++ functions and control structures. | A variety of control structures are used in the project and the project code is clearly organized into functions. One example of function and control structure is attached in the adjacent references. | **Function**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 28 onwards), **Control structure**: [main.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/main.cpp) (line 20-37) |
+| The project reads data from a file and process the data, or the program writes data to a file. | The project reads game leaderboard data from the [gamedata.txt](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/data/gamedata.txt) file as well as writes the score and player information to the [gamedata.txt](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/data/gamedata.txt) file. | **Read**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 9-25), **Write**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 81-89) |
+
+
