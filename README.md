@@ -14,7 +14,7 @@ The project code in this repository is based off of the starter code provided in
   ![Leaderboard](images/leaderboard.png)
   * The last option - `3. Quit`, allows the player to successfully terminate the game
 * To make the game more exciting and increasing the challenge periodically throughout the game playing time, `Posion` is added to the game. The poison blocks are added randomly one by one everytime the score increases by 5. The snake dies after eating the poison block and the game is over.
-|![Snake Game Modified](images/snake_modified.png)|![Snake Dies After Eating Poison](images/snake_dies_eating_poison.png)|
+![Snake Game Modified](images/snake_modified.png)
 * Game window automatically terminates when the snake dies as the game is over. 
 * At the end of the game, the player's score is displayed in the terminal and further the player's score is compared with the top ten scores on the leaderboard. Based on:
   * If the player's score is less than the minimum score in the leaderboard, the game shows the leaderboard to the player and takes them back to the game menu.
@@ -79,5 +79,6 @@ The Snake game code consists of six main classes: `Game`, `Snake`, `Controller`,
 | Classes encapsulate behavior. | Quite a few functions and data are grouped together into classes as they are important for the correct working of the class object. A couple examples to point out in this project are - the `PlacePoison` function in `game.cpp` and `AddPlayerName` function in `gamedata.cpp` | [game.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/game.cpp) (line 79-115), [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 75-81) |
 
 ### Memory Management
-
-
+| Criteria | Explanation | Reference(s) |
+| -------- | ----------- | ------------ |
+| The project makes use of references in function declarations. | Atleast two functions use pass-by-reference in the project code. The two examples are - the `Render` function in the `Renderer` class using reference to the `std::vector<SDL_Point> poison` and another example within the same function is `SDL_RenderFillRect(sdl_renderer, &block)` using reference to the `SDL_Rect block` object | [renderer.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/renderer.cpp) (line 42 and 64) |
