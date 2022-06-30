@@ -50,21 +50,27 @@ The Snake game code consists of six main classes: `Game`, `Snake`, `Controller`,
 ## Rubric Items Satisfied by the New Features
 
 ### README
-| Criteria | Explanation | References |
-| -------- | ----------- | ---------- |
+| Criteria | Explanation | Reference(s) |
+| -------- | ----------- | ------------ |
 | A README with instructions is included with the project | The README is included with the project and has instructions for building/running the project. |  |
 | The README indicates which project is chosen. | The README indicates the project selected. It also presents the file and class structure and describes the expected behavior or output of the game. |  |
 | The README includes information about each rubric point addressed. | The README indicates which rubric points are addressed. The README also indicates where in the code (i.e. files and line numbers) that the rubric points are addressed. |  |
 
 ### Compiling and Testing
-| Criteria | Explanation | References |
-| -------- | ----------- | ---------- |
+| Criteria | Explanation | Reference(s) |
+| -------- | ----------- | ------------ |
 | The submission must compile and run. | The project code compiles and runs without errors. |  |
 
 ### Loops, Functions, I/O
-| Criteria | Explanation | References |
-| -------- | ----------- | ---------- |
-| The project demonstrates an understanding of C++ functions and control structures. | A variety of control structures are used in the project and the project code is clearly organized into functions. One example of function and control structure is attached in the adjacent references. | **Function**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 28 onwards), **Control structure**: [main.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/main.cpp) (line 20-37) |
-| The project reads data from a file and process the data, or the program writes data to a file. | The project reads game leaderboard data from the [gamedata.txt](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/data/gamedata.txt) file as well as writes the score and player information to the [gamedata.txt](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/data/gamedata.txt) file. | **Read**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 9-25), **Write**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 81-89) |
+| Criteria | Explanation | Reference(s) |
+| -------- | ----------- | ------------ |
+| The project demonstrates an understanding of C++ functions and control structures. | A variety of control structures are used in the project and the project code is clearly organized into functions. One example of function and control structure is attached in the adjacent references. | **Function**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 28 onwards), **Control structure**: [main.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/main.cpp) (line 21-38) |
+| The project reads data from a file and process the data, or the program writes data to a file. | The project reads game leaderboard data from the [gamedata.txt](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/data/gamedata.txt) file as well as writes the score and player information to the [gamedata.txt](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/data/gamedata.txt) file. | **Read**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 9-25), **Write**: [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 82-90) |
+| The project accepts user input and processes the input. | The project presents a game menu to the player before starting the game to accept the player's input and subsequently, processes the input to execute the program as per the input. | **User input**: [gamemenu.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamemenu.cpp) (line 6-29), [gamedata.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.cpp) (line 73-79), **Input processing**: [main.cpp](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/main.cpp) (line 18-38 and line 60-61) |
+
+### Object Oriented Programming
+| Criteria | Explanation | Reference(s) |
+| -------- | ----------- | ------------ |
+| The project uses Object Oriented Programming techniques. | The project code is organized into classes with class attributes to hold the data, and class methods to perform tasks. | [gamemenu.h](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamemenu.h), [gamedata.h](https://github.com/nayan3090/Capstone-Snake-Game/blob/master/src/gamedata.h) |
 
 

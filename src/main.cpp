@@ -14,6 +14,7 @@ int main() {
 
   while (true)
   {
+    // Loops, Functions, I/O Criteria: Processes player's input
     gamemenu.userSelection();
     // Loops, Functions, I/O Criteria: Example to demonstrate the usage of control structure
     // Used 'switch case' to manipulate the output of the program based on player's input
@@ -55,6 +56,7 @@ int main() {
     game.Run(controller, renderer, kMsPerFrame);
     std::cout << "Game has terminated successfully!\n";
     std::cout << "Your Score: " << game.GetScore() << "\n";
+    // Loops, Functions, I/O Criteria: Processes player's input
     gamedata.AppendPlayerScore(game.GetScore());
     gamedata.WriteScoreToGameData();
     std::cout << std::endl

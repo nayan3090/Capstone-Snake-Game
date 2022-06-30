@@ -69,6 +69,7 @@ void GameData::AppendPlayerScore(int score)
     
 }
 
+// Loops, Functions, I/O Criteria: Game accepts player's input
 std::string GameData::AddPlayerName()
 {
     std::string player;
