@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+// Loops, Functions, I/O Criteria: Game accepts player's input
 void GameMenu::userSelection()
 {
     std::cout<< "************************* Snake Game Menu *************************" << std::endl

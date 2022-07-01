@@ -13,7 +13,7 @@ The project code in this repository is based off of the starter code provided in
   * Second option - `2. Highscores` displays the leaderboard. It prints out the top ten scores ever achieved by the players who played this game
   ![Leaderboard](images/leaderboard.png)
   * The last option - `3. Quit`, allows the player to successfully terminate the game
-* To make the game more exciting and increasing the challenge periodically throughout the game playing time, `Posion` is added to the game. The poison blocks are added randomly one by one everytime the score increases by 5. The snake dies after eating the poison block and the game is over.
+* To make the game more exciting and increasing the challenge periodically throughout the game playing time, `Poison` is added to the game. The poison blocks are added randomly one by one everytime the score increases by 5. The snake dies after eating the poison block and the game is over.
 ![Snake Game Modified](images/snake_modified.png)
 * Game window automatically terminates when the snake dies as the game is over. 
 * At the end of the game, the player's score is displayed in the terminal and further the player's score is compared with the top ten scores on the leaderboard. Based on:

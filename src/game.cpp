@@ -82,34 +82,27 @@ void Game::PlacePoison() {
 
   // Check if the score is 5's multiple
   if (score % 5 == 0 ) 
-    {
+  {
       // Create an SDL point and add poison cell after every 5th food eaten by the snake
-      SDL_Point p; 
-      p.x = 0; 
-      p.y = 0;
-      for(int i = 0; i < counter; i++)
-      {
-        poison.emplace_back(p);
-      }
+    SDL_Point p; 
+    p.x = 0; 
+    p.y = 0;
+    for(int i = 0; i < counter; i++)
+    {
+      poison.emplace_back(p);
     }
     counter++;
+  }
   // Iterate through all the items in the poison vector
   for(SDL_Point  &p : poison)
   {
-    if (p.x == 0 && p.y == 0)
+    x = random_w(engine);
+    y = random_h(engine);
+    // Check that the location is not occupied by a snake or food item before placing poison.
+    if (!snake.SnakeCell(x, y) && !Game::FoodCell(x, y) && !Game::PoisonCell(x, y)) 
     {
-        while (true)
-      {
-        x = random_w(engine);
-        y = random_h(engine);
-        // Check that the location is not occupied by a snake or food item before placing poison.
-        if (!snake.SnakeCell(x, y) && !Game::FoodCell(x, y) && !Game::PoisonCell(x, y)) 
-        {
-          p.x = x;
-          p.y = y;
-          break;
-        }
-      }
+      p.x = x;
+      p.y = y;
     }
   }
 }
